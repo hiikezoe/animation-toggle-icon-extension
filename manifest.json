@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Animation Toggle Icon",
+  "version": "1.0",
+  "description": "Animation toggle icon on browser action",
+  "permissions": [
+    "tabs"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "browser_action": {
+    "default_icon": "default.svg"
+  }
+}
