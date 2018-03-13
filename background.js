@@ -12,15 +12,15 @@ browser.browserAction.onClicked.addListener(() => {
   '  from { fill: gray; }' +
   '  to { fill: red; }' +
   '}' +
-  '#circle {' +
+  'circle {' +
   '  animation: move' + index + ' 0.5s forwards ' + direction + ';' +
   '}' +
-  '#rect {' +
+  'rect {' +
   '  animation: color' + index + ' 0.5s forwards ' + direction + ';' +
   '}' +
   '</style>' +
-  '<rect id="rect" x="5" y="20" rx="30" ry="25" width="90" height="50" style="fill:gray;"/>' +
-  '<circle id="circle" cx="70" cy="45" r="20" style="fill: white;" />' +
+  '<rect x="5" y="20" rx="30" ry="25" width="90" height="50" style="fill:gray;"/>' +
+  '<circle cx="70" cy="45" r="20" style="fill: white;" />' +
   '</svg>';
   browser.browserAction.setIcon({ path: 'data:image/svg+xml,' + escape(svg) }).then(() => {
     index++;
