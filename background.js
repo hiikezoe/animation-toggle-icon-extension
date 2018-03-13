@@ -19,7 +19,7 @@ browser.browserAction.onClicked.addListener(() => {
   '  animation: color 0.5s forwards ' + direction + ';' +
   '}' +
   '</style>' +
-  '<rect x="5" y="20" rx="30" ry="25" width="90" height="50" style="fill:gray;"/>' +
+  '<rect x="5" y="20" rx="30" ry="25" width="90" height="50" />' +
   '<circle cx="70" cy="45" r="20" style="fill: white;" />' +
   '</svg>';
   browser.browserAction.setIcon({ path: 'data:image/svg+xml,' + escape(svg) }).then(() => {
