@@ -2,21 +2,21 @@ let index = 0;
 browser.browserAction.onClicked.addListener(() => {
   let direction = (index % 2 == 0) ? 'normal' : 'reverse';
   const svg =
-  '<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100" width="100" height="100">' +
+  '<svg xmlns="http://www.w3.org/2000/svg" id="' + index + '" viewbox="0 0 100 100" width="100" height="100">' +
   '<style type="text/css">' +
-  '@keyframes move' + index + ' {' +
+  '@keyframes move {' +
   '  from { transform: translateX(0%); }' +
   '  to { transform: translateX(-40%); }' +
   '}' +
-  '@keyframes color' + index + ' {' +
+  '@keyframes color {' +
   '  from { fill: gray; }' +
   '  to { fill: red; }' +
   '}' +
   'circle {' +
-  '  animation: move' + index + ' 0.5s forwards ' + direction + ';' +
+  '  animation: move 0.5s forwards ' + direction + ';' +
   '}' +
   'rect {' +
-  '  animation: color' + index + ' 0.5s forwards ' + direction + ';' +
+  '  animation: color 0.5s forwards ' + direction + ';' +
   '}' +
   '</style>' +
   '<rect x="5" y="20" rx="30" ry="25" width="90" height="50" style="fill:gray;"/>' +
